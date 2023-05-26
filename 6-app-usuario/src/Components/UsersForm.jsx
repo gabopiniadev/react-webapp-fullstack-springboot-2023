@@ -19,9 +19,14 @@ export const UsersForm = () => {
             ...UsersForm,
             [name] : value,
        })
-    }   
+    }  
+    
+    const onSubmit = () => {
+        event.preventDefault();
+    }
+
     return (
-           <form action="">
+           <form onSubmit={ onSubmit }>
                 <input 
                     className="form-control my-3 w-75" 
                     placeholder="Username"
