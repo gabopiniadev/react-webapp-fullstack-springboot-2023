@@ -3,7 +3,7 @@ import { useState } from "react"
 const initialUsersForm = {
     username: '',
     password: '',
-    email: ''
+    email: '',
 }
 
 export const UsersForm = () => {
@@ -14,11 +14,12 @@ export const UsersForm = () => {
     
     const onInputChange = ({ target }) => {
        // console.log(target.value);
-       const {name, value} = target;
+       const { name, value } = target;
        setUsersForm({
             ...UsersForm,
             [name] : value,
        })
+<<<<<<< Updated upstream
     }  
     
     const onSubmit = () => {
@@ -27,6 +28,17 @@ export const UsersForm = () => {
 
     return (
            <form onSubmit={ onSubmit }>
+=======
+    }   
+
+    const onSumit = ( event ) => {
+        event.preventDefault(); //Utilizar para no reiniciar la pantalla.
+        console.log(usersForm);
+    }
+
+    return (
+           <form onSubmit={ onSumit }>
+>>>>>>> Stashed changes
                 <input 
                     className="form-control my-3 w-75" 
                     placeholder="Username"
